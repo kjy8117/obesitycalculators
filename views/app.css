@@ -1,0 +1,239 @@
+body{
+    margin: 0 auto;
+    padding: 0 auto;
+    justify-content: center; 
+    text-align: center;
+    align-items: center;
+    font-family: 'Roboto Slab', serif;
+    min-height: 100vh;
+}
+.navbar{
+    background-color: white;
+    font-family: 'Oswald', sans-serif;
+}
+.navbar-brand{
+    font-size: 1.5em;
+    padding: 5px 15px;
+    margin: 5px 15px;
+}
+#navbarNav{
+    justify-content: end;
+    padding: 5px 20px;
+    margin: 5px 20px;
+}
+article{
+    width: 75%;
+    max-width: 1000px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+h1{
+    text-align: center;
+    padding: 20px 0;
+    margin: 20px 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+.intro{
+    text-align: left;
+    font-family: 'Roboto Slab', serif;
+    padding: 10px 50px 20px 50px;
+    margin: 10px 50px 20px 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.reliability{
+    padding: 2px 0;
+    margin: 2px 0;
+}
+.unitcvt{
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    text-align: center;
+}
+
+.gotolink{
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+a#gotolink{
+    color: rgb(108, 185, 239);
+    font-size: large;
+}
+
+a#gotolink:focus,
+a#gotolink:hover {
+    color: rgb(44, 96, 241);
+}
+
+#unitcvtlabel{
+    padding: 0 2.5px;
+    margin: 0 2.5px;
+}
+#lbkg, #feetcm, #inchcm {
+    padding-right: 5px;
+    margin-right: 5px;
+} 
+
+.fourcalc{
+    /* width: 75%;
+    max-width: 1000px; */
+    /* display: flex; */
+    flex-direction: row; 
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0, 25px;
+    margin: 0, 25px;
+}
+
+.firstdiv, .seconddiv{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;  
+}
+.seconddiv{
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+}
+
+.calc{
+    padding: 0.5em 1.5em;
+    margin: 0.5em 1.5em; 
+}
+
+@media (min-width: 750px) {
+    .firstdiv, .seconddiv{
+        flex-direction: row;
+    }
+} 
+
+.optionlabel{
+    padding: 5px 0;
+    margin: 5px 0;
+}
+
+#subtitle{
+    padding: 0 5px;
+    margin: 0 5px;
+}
+
+.form-check{
+    display: inline-block;
+    padding: 0 20px;
+    margin: 0 20px;
+}
+
+.input-group{
+    width: 350px;
+    justify-content: center; 
+    padding: 10px;
+    margin: 10px;
+}
+
+.d-grid{
+    width: 350px;
+    text-align: center;
+    justify-content: center;
+    align-items:center;
+    padding: 0.5em 10px;
+    margin: 0.5em 10px;
+}
+
+
+/* contact form!  */
+
+.contactform{
+    font-family: 'Work Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    max-width: 1000px;
+    min-height: 80vh;
+    justify-content: center;
+    text-align: center;
+    margin: 2em 0;
+    padding: 1em 0;
+}
+
+@media (min-width: 700px) {
+    .contactform{
+        flex-direction: row;
+    }
+}
+
+.contactarticle1{
+    text-align:left;
+    width:80%;
+    margin: 2em 0 2em 5px;
+    padding: 2em 0 2em 5px;
+    
+}
+.contactarticle2{
+    width:80%;
+    margin: 1em 0;
+    padding: 1em 0;
+}
+
+
+.sendbtn{
+    margin: 1em auto;
+    padding: 1em 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/* about 폼 */
+.aboutform{
+    font-family: 'Work Sans', sans-serif;
+    width: 75%;
+    max-width: 1000px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    padding: 25px 10px 25px 10px;
+    margin: 20px 10px;
+}
+h2{
+    padding: 10px 0;
+    margin: 10px 0;
+}
+
+.obesityscript{
+    padding: 10px 0;
+    margin: 2em 0;
+}
+.obesityscript:first-child{
+    margin-top:50px;
+}
+#tablewidth{
+    padding: 0 1em;
+    margin: 0 1em;
+}
+
+footer {
+    background-color: #4b4b4b;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 0;
+}

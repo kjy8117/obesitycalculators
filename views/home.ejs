@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%-include('../part/headcss')%>
+    <title>Home</title>
+</head>
+<body>
+    <%-include('../part/navbar')%>
+        <article class="topsection mx-auto">
+            <h1>Obesity Check Calculators</h1>
+            <h2>Unlock Insights Into Your Health With Accurate Measurements</h2>
+            <%-include('../part/intro.ejs')  %>
+        <div class="fourcalc mx-auto">
+            <div class="unitcvt"> 
+                <label for="" id="unitcvtlabel">Unit Converter</label>
+                <button type="button" class="btn btn-outline-secondary" id="feetcm"
+                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">ft to cm</button>
+                <button type="button" class="btn btn-outline-secondary" id="lbkg"
+                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">lb to kg</button>
+                <button type="button" class="btn btn-outline-secondary" id="inchcm"
+                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">inch to cm</button>
+            </div>
+            <div class="firstdiv mx-auto">
+            <div class="calc mx-auto">
+                <div class="gotolink"><a href="about#bmiscript" id="gotolink">What is BMI?</a></div>
+                <div class="optionlabel">
+                    <strong>BMI is not influenced by sex.</strong>
+                </div>
+                <div class="input-group input-group-sm mx-auto mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Height</span>
+                    </div>
+                    <input type="text" class="form-control" name="height" id="height"
+                    aria-label="Small" placeholder="170.4cm &#8594 170.4" aria-describedby="inputGroup-sizing-sm" required>
+                </div>
+                <div class="input-group input-group-sm mx-auto mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Weight</span>
+                    </div>
+                    <input type="text" class="form-control" name="weight" id="weight"
+                    aria-label="Small" placeholder="60.8kg &#8594 60.8" aria-describedby="inputGroup-sizing-sm" required>
+                </div>
+                <div class="d-grid gap-2 col-5 mx-auto" id="runbtn">
+                        <button type="button" class="btn btn-secondary btn-lg" id="bmibtn" onclick="bmiFunction()">Check My BMI</button>
+                </div> 
+                <div id="result1" class="result"></div>
+                
+            </div>
+
+            <div class="calc mx-auto">
+                <div class="gotolink"><a href="about#pibwscript" id="gotolink">What is PIBW?</a></div>
+                <div class="optionlabel">
+                    <label for="" id="subtitle"><b>Sex</b></label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault4" id="male" value="male">
+                        <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault4" id="female" value="female">
+                        <label class="form-check-label" for="female">Female</label>
+                    </div>
+                    </div>
+                    <div class="input-group input-group-sm mx-auto mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Height</span>
+                        </div>
+                        <input type="text" class="form-control" name="height" id="height3"
+                        aria-label="Small" placeholder="170.4cm &#8594 170.4" aria-describedby="inputGroup-sizing-sm" required>
+                    </div>
+                    <div class="input-group input-group-sm mx-auto mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Weight</span>
+                        </div>
+                        <input type="text" class="form-control" name="weight" id="weight3"
+                        aria-label="Small" placeholder="60.8kg &#8594 60.8" aria-describedby="inputGroup-sizing-sm" required>
+                    </div>
+                    <div class="d-grid gap-2 col-5 mx-auto" id="runbtn">
+                        <button type="button" class="btn btn-secondary btn-lg" id="pibwbtn" onclick="pibwFunction()">Check My PIBW</button>
+                    </div> 
+                    <div id="result2" class="result"></div>
+                    <div id="result22" class="result"></div>
+            </div>
+            </div>
+
+
+            <div class="seconddiv mx-auto">
+
+
+            <div class="calc mx-auto">
+                <div class="gotolink"><a href="about#whrscript" id="gotolink">What is WHR?</a></div>
+                <div class="optionlabel">
+                <label for="flexRadioDefault2" id="subtitle"><b>Sex</b></label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault2" id="male3" value="male">
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault2" id="female3" value="female">
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+                </div>
+                <div class="input-group input-group-sm mx-auto mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Hip Circumference</span>
+                    </div>
+                    <input type="text" class="form-control" name="hip" id="hip" placeholder="75.2cm &#8594 75.2"
+                    aria-label="Small" aria-describedby="inputGroup-sizing-sm" required>
+                </div>
+                <div class="input-group input-group-sm mx-auto mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Waist Circumference</span>
+                    </div>
+                    <input type="text" class="form-control" name="belly" id="belly" placeholder="120.0cm &#8594 120.0"
+                    aria-label="Small" aria-describedby="inputGroup-sizing-sm" required>
+                </div>
+                <div class="d-grid gap-2 col-5 mx-auto" id="runbtn">
+                    <button type="button" class="btn btn-secondary btn-lg" id="whrbtn" onclick="whrFunction()">Check My WHR</button>
+                </div>
+                <div id="result3" class="result"></div>
+            </div>
+        
+
+            <div class="calc mx-auto">
+                <div class="gotolink"><a href="about#whtrscript" id="gotolink">What is WHtR?</a></div>
+                <div class="optionlabel">
+                <label for="" id="subtitle"><b>Sex</b></label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault3" id="male4" value="male">
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault3" id="female4" value="female">
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+                </div>
+                <div class="input-group input-group-sm mx-auto mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Height</span>
+                    </div>
+                    <input type="text" class="form-control" name="height2" id="height2"
+                    aria-label="Small" placeholder="170.4cm &#8594 170.4" aria-describedby="inputGroup-sizing-sm" required>
+                </div>
+                <div class="input-group input-group-sm mx-auto mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Waist Circumference</span>
+                    </div>
+                    <input type="text" class="form-control" name="belly2" id="belly2" placeholder="120.0cm &#8594 120.0" required
+                    aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="d-grid gap-2 col-5 mx-auto" id="runbtn">
+                    <button type="button" class="btn btn-secondary btn-lg" id="whtrbtn" onclick="whtrFunction()">Check My WHtR</button>
+                </div>
+                <div id="result4" class="result"></div>
+            </div>
+            
+            </div>
+        </div>        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="calcombo.js"></script>
+</article>
+</body>
+<footer>
+    <%-include('../part/footer')%>
+    <script src="yearfunction.js"></script>
+</footer>    
+</html>

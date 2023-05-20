@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%-include('../part/headcss')%>
+    <title>About</title>
+</head>
+<body>
+    <%-include('../part/navbar') %>
+    <h1>About</h1>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <div class="aboutform mx-auto">
+        <div class="obesityscript" id="bmiscript">
+            <div class="reliability">Reliability level <%-include('../part/onestar')%></div>
+            
+            <h2><strong>Body Mass Index (BMI)</strong></h2>
+                <p>
+                Unlock a world of body insights with BMI! Calculate your body fat percentage by dividing your weight in kilograms by your height in meters squared. 
+                While BMI provides an estimate of total body fat, remember that it doesn't consider muscle mass, bone density, or body composition.  
+                Remember that it is always best to consult with a healthcare professional for an accurate assessment of your health.
+                </p>
+                <p>
+                <h3>How is BMI calculated?</h3><br>
+                To calculate your BMI, you will need to know your weight and height. You can use the following formula: <br> 
+                <strong>BMI = weight (kg) / height (m)² </strong> <br> 
+                Once you have calculated your BMI, you can use the following ranges to determine whether you are underweight, normal weight, overweight, or obese: <br>
+                <br>
+                <table>
+                    <tr>
+                        <th>Weight status</th>
+                        <th id="tablewidth">BMI range</th>
+                    </tr>
+                    <tr>
+                        <td>Underweight</td>
+                        <td id="tablewidth">BMI &lt; 18.5</td>
+                    </tr>
+                    <tr>
+                        <td>Moderate</td>
+                        <td id="tablewidth">18.5 &#8804; BMI &lt; 25 </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Overweight</td>
+                        <td id="tablewidth">25 &#8804; BMI &lt; 30 </td>                 
+                    </tr>
+                    <tr>
+                        <td>Obese</td>
+                        <td id="tablewidth">BMI &#8805; 30</td>
+                    </tr>
+                </table>
+                </p>
+                <p>
+                <h3>What is a limitation of BMI?</h3><br>
+                BMI can provide a general idea of whether you are at a healthy weight for your height. 
+                However, it is important to note that BMI is not a perfect measure of health and does have limitations. 
+                For example, it does not take into account muscle mass, bone density, or body composition. 
+                Plus, BMI calculates overall body fat percentage and cannot quantify the distribution of body fat, which is also considered a limitation.
+                Therefore, it should be used as a general guide rather than a definitive indicator of health.
+                </p>
+                <!-- <p>
+                <strong>Conclusion: </strong><br>
+                In conclusion, BMI is a useful tool to determine whether you are at a healthy weight for your height. <br> 
+                However, it is not a perfect measure of health and should be used in conjunction with other health measures to assess your overall health. <br>
+                Remember that it is always best to consult with a healthcare professional for an accurate assessment of your health.
+                </p> -->
+                <a href="home">Calculate My BMI</a>
+        </div>
+
+        <div class="obesityscript" id="pibwscript">
+            <div class="reliability">Reliability level <%-include('../part/onehalfstar')%></div>
+            <h2><strong>Percent of Ideal Body Weight (PIBW)</strong></h2>
+            <p>
+                Percent of Ideal Body Weight (PIBW) is a measure that compares an individual's current weight to their ideal body weight, which is the weight range that is considered healthy for them based on their height, age, and gender. 
+                It is often used in clinical settings to monitor the nutritional status of patients, particularly those who are underweight or have experienced significant weight loss.
+                Remember that it is always best to consult with a healthcare professional for an accurate assessment of your health.
+            </p>
+            <p>
+                <h3>How is PIBW calculated?</h3><br>
+                The formula for calculating PIBW is: <br>
+                <strong>PIBW = (Current weight / Ideal body weight) x 100% </strong><br>
+                *How is ideal body weight calculated? <br>
+                <b>Men:</b> height(m) * height(m) * 22 <br>
+                <b>Women:</b> height(m) * height(m) * 21 <br>
+                For example, if a woman's height is 172cm (=1.72m), her ideal body weight is 1.72 * 1.72 * 21.
+            </p>
+            <p>
+                <h3>What can PIBW tell you about your health?</h3>
+                <br>
+                Percent of Ideal Body Weight (PIBW) is used to gain insights regarding your nutritional status. 
+                For example, if an individual's ideal body weight is 120 pounds and their current weight is 100 pounds, their PIBW would be calculated as:
+                PIBW = (100 / 120) x 100% = 83.3% 
+                In this case, the individual's PIBW is 83.3%, indicating that they are below their ideal body weight and may require additional nutritional support. <br>
+                <br>
+                <table>
+                    <tr>
+                        <th>Weight status</th>
+                        <th id="tablewidth">PIBW(%)</th>
+                    </tr>
+                    <tr>
+                        <td>Underweight</td>
+                        <td id="tablewidth">PIBW &lt; 90</td>
+                    </tr>
+                    <tr>
+                        <td>Normal weight</td>
+                        <td id="tablewidth">90 &#8804; PIBW &lt; 110 </td>
+                    </tr>
+                    <tr>
+                        <td>Overweight</td>
+                        <td id="tablewidth">110 &#8804; PIBW &lt; 120</td>
+                    </tr>
+                    <tr>
+                        <td>Obesity class &#8544</td>
+                        <td id="tablewidth">120 &#8804; PIBW &lt; 130</td>
+                    </tr>
+                    <tr>
+                        <td>Obesity class &#8545</td>
+                        <td id="tablewidth">130 &#8804; PIBW &lt; 160</td>
+                    </tr>
+                    <tr>
+                        <td>Obesity class &#8546</td>
+                        <td id="tablewidth">PIBW &#8805; 160</td>
+                    </tr>
+                </table>
+            </p>
+            <a href="home">Calculate My FIBW</a>
+        </div>
+
+        <div class="obesityscript" id="whrscript" >
+            <div class="reliability">Reliability level <%-include('../part/twostars')%></div>
+            <h2><strong>Waist-to-Hip Ratio (WHR)</strong></h2>
+            <p>
+                WHR is a measure of your body fat distribution, calculated by dividing the circumference of your waist by the circumference of your hips.
+                A high WHR indicates that more fat is stored around the waist, which can be a risk factor for certain health conditions. Remember that it is always best to consult with a healthcare professional for an accurate assessment of your health
+            </p> 
+            <p>
+                <h3>How is WHR calculated?</h3> <br>
+                To calculate your WHR, you will need to measure the circumference of your waist and hips. 
+                You can use a measuring tape to measure the widest part of your waist, and the widest part of your hips, usually at the level of the buttocks. 
+                Once you have these measurements, you can use the following formula: 
+                <strong>WHR = waist circumference / hip circumference</strong><br>
+                
+            </p>
+            <p>
+                <h3>How to measure waist and hip circumference?</h3><br>
+                Stand with your feet 25-30 cm apart and distribute your weight evenly on both feet. 
+                Use a tape measure to measure your waist and hip circumference, making sure the tape measure is slightly loose to avoid compressing the skin. 
+                To measure your waist, place the tape measure at the midpoint between your lowest rib and the top of your hip bone. 
+                To measure your hip circumference, place the tape measure around the widest part of your hips.
+            </p>
+            <p>
+                <h3>What can WHR tell us about our health?</h3><br>
+                A high WHR can indicate a higher risk for health problems such as heart disease, stroke, and type 2 diabetes.  
+                This is because storing excess fat around the waist can increase the production of certain hormones and lead to insulin resistance.  
+                In general, a WHR of 0.85 or higher in women, and 0.90 or higher in men, is considered to be high and may indicate an increased risk for health problems. <br>
+                <br>
+                <table>
+                    <tr>
+                        <th>Health risk</th>
+                        <th id="tablewidth">Men</th>
+                        <th id="tablewidth">Women</th>
+                    </tr>
+                    <tr>
+                        <td>Low</td>
+                        <td id="tablewidth">WHR &#8804; 0.90</td>
+                        <td id="tablewidth">WHR &#8804; 0.80</td>
+                    </tr>
+                    <tr>
+                        <td>Moderate</td>
+                        <td id="tablewidth">0.91 &#8804; WHR &lt; 1.0</td>
+                        <td id="tablewidth">0.81 &#8804; WHR &lt; 0.84</td>
+                    </tr>
+                    <tr>
+                        <td>High</td>
+                        <td id="tablewidth">WHR &#8805; 1.0</td>
+                        <td id="tablewidth">WHR &#8805; 0.84</td>
+                    </tr>
+                </table>
+            </p>
+            <p>
+                <h3>What is a limitation of WHR?</h3><br>
+                Although waist circumference (WC) and waist-to-hip ratio (WHR) are commonly used methods for measuring abdominal obesity, it is important to note that they do not provide an accurate measurement of visceral fat. 
+                Imaging techniques such as abdominal CT scanning are more effective in assessing visceral fat.
+            </p>
+            <a href="home">Calculate My WHR</a>
+            <!-- <p>
+                <strong>Conclusion: </strong><br>
+                In conclusion, WHR is a useful tool to determine your body fat distribution and assess your risk for certain health conditions. <br> 
+                It can be calculated by dividing your waist circumference by your hip circumference, and a high WHR may indicate an increased risk for health problems. <br> 
+                Remember that it is always best to consult with a healthcare professional for an accurate assessment of your health.
+            </p> -->
+        </div>
+
+        <div class="obesityscript" id="whtrscript">
+            <div class="reliability">Reliability level <%-include('../part/twostars') %></div>
+            <h2><strong>Waist-to-Height Ratio (WHtR)</strong></h2>
+            <P>
+                WHtR is a measure of your body fat distribution, calculated by dividing your waist circumference by your height. 
+                A high WHtR indicates that more fat is stored around the waist, which can be a risk factor for certain health conditions.
+                Remember that it is always best to consult with a healthcare professional for an accurate assessment of your health.
+            </P>
+            <p>
+                <h3>How is WHtR calculated?</h3><br>
+                To calculate your WHtR, you will need to measure the circumference of your waist and your height. 
+                You can use a measuring tape to measure your waist at the level of your belly button, and your height without shoes on. 
+                Once you have these measurements, you can use the following formula: <strong>WHtR = waist circumference / height</strong> <br>
+                
+            </p>
+            <p>
+                <h3>What can WHtR tell you about your health?</h3><br>
+                A high WHtR can indicate a higher risk for health problems such as heart disease, stroke, and type 2 diabetes. 
+                This is because storing excess fat around the waist can increase the production of certain hormones and lead to insulin resistance. 
+                The advantage of WHtR is the use of waist circumference. Health issues related to obesity are closely related to visceral fat, and waist size can indirectly measure visceral fat. 
+                In general, a WHtR of 0.5 or higher is considered to be high and may indicate an increased risk for health problems. <br>
+                <br>
+                <table>
+                    <tr>
+                        <th>Health risk</th>
+                        <th id="tablewidth">Men</th>
+                        <th id="tablewidth">Women</th>
+                    </tr>
+                    <tr>
+                        <td>Severe underweight</td>
+                        <td id="tablewidth">WHtR &#8804; 0.34</td>
+                        <td id="tablewidth">WHtR &#8804; 0.34</td>
+                    </tr>
+                    <tr>
+                        <td>Underweight</td>
+                        <td id="tablewidth">0.35 &#8804; WHtR &lt; 0.43</td>
+                        <td id="tablewidth">0.35 &#8804; WHtR &lt; 0.42</td>
+                    </tr>
+                    <tr>
+                        <td>Moderate</td>
+                        <td id="tablewidth">0.43 &#8804; WHtR &lt; 0.53</td>
+                        <td id="tablewidth">0.42 &#8804; WHtR &lt; 0.49</td>
+                    </tr>
+                    <tr>
+                        <td>Overweight</td>
+                        <td id="tablewidth">0.53 &#8804; WHtR &lt; 0.58</td>
+                        <td id="tablewidth">0.49 &#8804; WHtR &lt; 0.54</td>
+                    </tr>
+                    <tr>
+                        <td>Severe overweight</td>
+                        <td id="tablewidth">0.58 &#8804; WHtR &lt; 0.63</td>
+                        <td id="tablewidth">0.54 &#8804; WHtR &lt; 0.58</td>
+                    </tr>
+                    <tr>
+                        <td>Obese</td>
+                        <td id="tablewidth">WHtR &#8805; 0.63</td>
+                        <td id="tablewidth">WHtR &#8805; 0.58</td>
+                    </tr>
+                </table> 
+            </p>
+            <a href="home">Calculate My WHtR</a>
+        </div>
+    </div>
+</body>
+<footer>
+    <%-include('../part/footer')%>
+    <script src="yearfunction.js"></script>   
+</footer>
+</html>
