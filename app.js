@@ -18,6 +18,9 @@ app.get('/contact', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about')
 })
+app.get('/ads.txt', (req, res) => {
+    res.render('ads.txt')
+})
 
 app.listen(3000, () => {
     console.log('connected')
